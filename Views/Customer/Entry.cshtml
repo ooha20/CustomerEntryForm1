@@ -1,0 +1,178 @@
+﻿@model DEMO.Models.Customer
+
+@{
+    ViewData["Title"] = "Customer Entry Form";
+}
+
+<section
+  class="bg-dark text-white py-5"
+  style="min-height: 100vh; background: linear-gradient(to right, #141e30, #243b55);"
+>
+  <div class="container d-flex justify-content-center align-items-center flex-column text-center">
+    <h1 class="display-5 fw-bold mb-4">Start Your Insurance Journey</h1>
+    <p class="lead mb-5" data-aos="zoom-in">
+      Fill out your details to begin a safe and seamless onboarding process.
+    </p>
+
+    <div
+      class="p-5 rounded shadow-lg backdrop-blur-lg"
+      style="
+        background: rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        box-shadow: 0 8px 32px 0 rgba(0,0,0,0.37);
+        max-width: 800px;
+        width: 100%;
+        color: #fff;
+      "
+    >
+      <h4 class="text-center mb-4 text-info fw-bold">Customer Entry Form</h4>
+
+      <form asp-action="Entry" enctype="multipart/form-data" method="post">
+        <div asp-validation-summary="All" class="text-warning mb-3"></div>
+
+        <div class="row g-3">
+          <!-- First Name (Actor) -->
+          <div class="col-md-6">
+            <label asp-for="FirstName" class="form-label fw-semibold">
+              <i class="bi bi-person-badge me-1"></i>First Name
+            </label>
+            <div class="input-group">
+              <span class="input-group-text bg-light text-dark">
+                <i class="bi bi-person-badge"></i>
+              </span>
+              @Html.TextBoxFor(m => m.FirstName, new { @class = "form-control bg-light text-dark" })
+            </div>
+          </div>
+
+          <!-- Last Name (Actor) -->
+          <div class="col-md-6">
+            <label asp-for="LastName" class="form-label fw-semibold">
+              <i class="bi bi-person-badge me-1"></i>Last Name
+            </label>
+            <div class="input-group">
+              <span class="input-group-text bg-light text-dark">
+                <i class="bi bi-person-badge"></i>
+              </span>
+              @Html.TextBoxFor(m => m.LastName, new { @class = "form-control bg-light text-dark" })
+            </div>
+          </div>
+
+          <!-- Address (Geo) -->
+          <div class="col-12">
+            <label asp-for="Address" class="form-label fw-semibold">
+              <i class="bi bi-geo-alt-fill me-1"></i>Address
+            </label>
+            <div class="input-group">
+              <span class="input-group-text bg-light text-dark">
+                <i class="bi bi-geo-alt"></i>
+              </span>
+              @Html.TextBoxFor(m => m.Address, new { @class = "form-control bg-light text-dark" })
+            </div>
+          </div>
+
+          <!-- City (Building) -->
+          <div class="col-md-4">
+            <label asp-for="City" class="form-label fw-semibold">
+              <i class="bi bi-building me-1"></i>City
+            </label>
+            <div class="input-group">
+              <span class="input-group-text bg-light text-dark">
+                <i class="bi bi-building"></i>
+              </span>
+              @Html.TextBoxFor(m => m.City, new { @class = "form-control bg-light text-dark" })
+            </div>
+          </div>
+
+          <!-- State (Flag) -->
+          <div class="col-md-4">
+            <label asp-for="State" class="form-label fw-semibold">
+              <i class="bi bi-flag-fill me-1"></i>State
+            </label>
+            <div class="input-group">
+              <span class="input-group-text bg-light text-dark">
+                <i class="bi bi-flag"></i>
+              </span>
+              @Html.TextBoxFor(m => m.State, new { @class = "form-control bg-light text-dark" })
+            </div>
+          </div>
+
+          <!-- Zip Code (Mailbox) -->
+          <div class="col-md-4">
+            <label asp-for="ZipCode" class="form-label fw-semibold">
+              <i class="bi bi-mailbox me-1"></i>Zip Code
+            </label>
+            <div class="input-group">
+              <span class="input-group-text bg-light text-dark">
+                <i class="bi bi-mailbox"></i>
+              </span>
+              @Html.TextBoxFor(m => m.ZipCode, new { @class = "form-control bg-light text-dark" })
+            </div>
+          </div>
+
+          <!-- Phone (Telephone) -->
+          <div class="col-md-6">
+            <label asp-for="Phone" class="form-label fw-semibold">
+              <i class="bi bi-telephone-fill me-1"></i>Phone
+            </label>
+            <div class="input-group">
+              <span class="input-group-text bg-light text-dark">
+                <i class="bi bi-telephone"></i>
+              </span>
+              @Html.TextBoxFor(m => m.Phone, new { @class = "form-control bg-light text-dark", placeholder = "e.g., xxx-xxx-xxxx" })
+            </div>
+          </div>
+
+          <!-- Image Upload (Camera) -->
+          <div class="col-md-6">
+            <label asp-for="Image" class="form-label fw-semibold">
+              <i class="bi bi-camera-fill me-1"></i>Upload Image
+            </label>
+            <div class="input-group">
+              <span class="input-group-text bg-light text-dark">
+                <i class="bi bi-camera"></i>
+              </span>
+              <input asp-for="Image" type="file" class="form-control bg-light text-dark" />
+            </div>
+          </div>
+
+          <!-- Email (Envelope) -->
+          <div class="col-md-6">
+            <label asp-for="Email" class="form-label fw-semibold">
+              <i class="bi bi-envelope-fill me-1"></i>Email
+            </label>
+            <div class="input-group">
+              <span class="input-group-text bg-light text-dark">
+                <i class="bi bi-envelope"></i>
+              </span>
+              @Html.TextBoxFor(m => m.Email, new { @class = "form-control bg-light text-dark", type = "email" })
+            </div>
+          </div>
+
+          <!-- Confirm Email (Envelope) -->
+          <div class="col-md-6">
+            <label asp-for="ConfirmEmail" class="form-label fw-semibold">
+              <i class="bi bi-envelope-fill me-1"></i>Confirm Email
+            </label>
+            <div class="input-group">
+              <span class="input-group-text bg-light text-dark">
+                <i class="bi bi-envelope"></i>
+              </span>
+              @Html.TextBoxFor(m => m.ConfirmEmail, new { @class = "form-control bg-light text-dark", type = "email" })
+            </div>
+          </div>
+
+          <!-- Submit -->
+          <div class="col-12 text-center mt-4">
+            <button type="submit" class="btn btn-info px-4 py-2 fw-semibold text-white">
+              <i class="bi bi-send-fill me-1"></i>Submit Application
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+@section Scripts {
+  <partial name="_ValidationScriptsPartial" />
+}

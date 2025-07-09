@@ -1,0 +1,124 @@
+﻿@* Views/Shared/_Layout.cshtml *@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body, .navbar-brand, .navbar-nav .nav-link {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .navbar-brand {
+            font-weight: 700;
+            font-size: 1.5rem;
+            letter-spacing: 1px;
+        }
+
+        .navbar-nav .nav-link {
+            font-weight: 600;
+            margin-left: 20px;
+        }
+    </style>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - DEMO</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+
+
+    <!-- Your site-wide styles -->
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/DEMO.styles.css" asp-append-version="true" />
+</head>
+<body class="d-flex flex-column min-vh-100">
+
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000, // animation duration in ms
+             once: false     // allow animation every time it comes into view
+        });
+    </script>
+
+
+    <!-- header -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-white">
+            <div class="container">
+                <a class="navbar-brand" asp-controller="Home" asp-action="Index"><span style="color: #3a75c4;">InsureEase</span></a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="mainNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" asp-controller="Home" asp-action="Index">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/Home/Index#services">Services</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" asp-controller="Home" asp-action="About">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" asp-controller="Contact" asp-action="Contact">Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+    </header>
+    
+
+
+    <!-- main content -->
+    <main >
+        @RenderBody()
+    </main>
+
+    <!-- Popup Chatbot or Floating Help Button-->
+    <button class="btn btn-primary position-fixed bottom-0 end-0 m-4" data-bs-toggle="offcanvas" data-bs-target="#helpChat" >
+        Need Help?
+    </button>
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="helpChat">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title">Support Bot</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="offcanvas-body">
+            <p>Ask us anything about the loan process!</p>
+            <input class="form-control" placeholder="Type your question..." />
+        </div>
+    </div>
+
+    <!-- footer: sticks to bottom -->
+        
+    <footer class="bg-dark text-white">
+        <div class="container text-center">
+            <div class="d-flex flex-column flex-md-row justify-content-between align-items-center mt-3">
+                <p class="mb-0 small">© 2025 InsureEase. All rights reserved.</p>
+                <div>
+                    <a href="#" class="text-white me-3 small text-decoration-none">Privacy</a>
+                    <a href="#" class="text-white me-3 small text-decoration-none">Support</a>
+                    <a href="#" class="text-white small text-decoration-none">Terms</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

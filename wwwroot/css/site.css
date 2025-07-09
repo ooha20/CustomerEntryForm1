@@ -1,0 +1,111 @@
+/* === Hero banner (slanted right edge) === */
+.page-banner {
+    background-color: #324554; /* dark slate */
+    padding: 5rem 0; /* tall banner */
+    clip-path: polygon(0 0, 90% 0, 100% 100%, 0% 100%);
+    margin-bottom: 2rem; /* space before next section */
+}
+
+    .page-banner h1 {
+        color: #fff;
+        font-size: 2.75rem;
+        font-weight: bold;
+        margin: 0;
+    }
+
+/* === Contact section background === */
+.contact-section {
+    padding-bottom: 4rem;
+}
+
+    /* === Form & details cards === */
+    .contact-section .card {
+        border: none;
+        border-radius: .5rem;
+    }
+
+    .contact-section .card-body {
+        padding: 2rem;
+    }
+
+.contact-details h5 {
+    margin-top: 1.5rem;
+    font-weight: 600;
+}
+
+
+/* Home page hero */
+.home-hero {
+    background: linear-gradient(135deg, #324554 0%, #4a6572 100%);
+    color: #fff;
+    text-align: center;
+    padding: 6rem 1rem;
+}
+
+    .home-hero h1 {
+        font-size: 3rem;
+        font-weight: 700;
+    }
+
+    .home-hero p.lead {
+        font-size: 1.25rem;
+        margin-bottom: 2rem;
+    }
+
+/* Feature cards */
+.features .card {
+    border: none;
+    border-radius: .5rem;
+    transition: transform .2s;
+}
+
+    .features .card:hover {
+        transform: translateY(-5px);
+    }
+
+html, body {
+    height: 100%;
+}
+
+.bg-light {
+    background-color :white !important;
+}
+
+blockquote {
+    font-size: 1.1rem;
+    font-style: italic;
+    color: #555;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-size: 100% 100%;
+}
+
+@media (min-width: 768px){
+    .news-input{
+        width:50%;
+    }
+}
+
+.customer-card {
+    transition: transform 0.3s ease;
+}
+
+    .customer-card:hover {
+        transform: scale(1.05);
+        z-index: 2;
+    }
+
+.card:hover i {
+    transform: scale(1.2);
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+
+
+@media (max-width: 768px) {
+    #headerCarousel section {
+        min-height: 50vh !important;
+    }
+}

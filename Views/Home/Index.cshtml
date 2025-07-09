@@ -1,0 +1,466 @@
+﻿@{
+    ViewData["Title"] = "Home";
+}
+
+
+
+<div id="headerCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
+    <div class="carousel-inner">
+
+        <!-- Slide 1 -->
+        <div class="carousel-item active">
+            <section class="position-relative text-white text-center d-flex align-items-center justify-content-center"
+                     style="
+    min-height: 70vh;
+    background-image: url('https://images.pexels.com/photos/5816286/pexels-photo-5816286.jpeg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+">
+                <!-- Overlay -->
+                <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-50"></div>
+
+                <div class="position-relative z-1">
+                    <h1 class="display-4 fw-bold" data-aos="fade-down">Welcome to <span style="color: #3a75c4;">InsureEase</span></h1>
+                    <p class="lead" data-aos="fade-up">Fast, secure, and hassle-free insurance customer onboarding platform.</p>
+                    <a class="btn btn-light btn-lg mt-3" asp-controller="Customer" asp-action="Entry">Get Started</a>
+                </div>
+            </section>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="carousel-item">
+            <section class="position-relative text-white text-center d-flex align-items-center justify-content-center"
+                    
+    style="
+    min-height: 70vh;
+    background-image: url('https://images.pexels.com/photos/5816291/pexels-photo-5816291.jpeg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;">
+                <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-50"></div>
+                <div class="position-relative z-1">
+                    <h1 class="display-4 fw-bold">Welcome to <span style="color: #3a75c4;">InsureEase</span></h1>
+                    <p class="lead">Fast, secure, and hassle-free insurance customer onboarding platform.</p>
+                    <a class="btn btn-light btn-lg mt-3" asp-controller="Customer" asp-action="Entry">Get Started</a>
+                </div>
+            </section>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="carousel-item">
+            <section class="position-relative text-white text-center d-flex align-items-center justify-content-center"
+                     
+                style="
+                min-height: 70vh;
+                background-image: url('https://images.pexels.com/photos/7731323/pexels-photo-7731323.jpeg');
+                background-position: center center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                ">
+                <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-50"></div>
+                <div class="position-relative z-1">
+                    <h1 class="display-4 fw-bold">Welcome to <span style="color: #3a75c4;">InsureEase</span></h1>
+                    <p class="lead">Fast, secure, and hassle-free insurance customer onboarding platform.</p>
+                    <a class="btn btn-light btn-lg mt-3" asp-controller="Customer" asp-action="Entry">Get Started</a>
+                </div>
+            </section>
+        </div>
+
+    </div>
+
+    <!-- Controls -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#headerCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#headerCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+    </button>
+</div>
+
+
+<!--Newsletter Subscribe-->
+<section class="bg-primary text-light p-5">
+    <div class="container">
+        <div class="d-md-flex justify-content-between 
+         align-items-center">
+     <h3 class="mb-3 mb-md-0">Sign Up For Our Newsletter</h3>
+
+     <div class="input-group news-input">
+         <input type="text" class="form-control"
+         placeholder="Enter Email">
+         <button class="btn btn-dark btn-lg" type="button">Button</button>
+   
+     </div>
+     </div>
+    </div>
+</section>
+<!-- Features Section -->
+<section class="py-5">
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-md-4 mb-4">
+                <div class="card bg-dark text-light">
+                    <div class="card-body">
+                        <i class="bi bi-person-check-fill fs-1 text-primary mb-3"></i>
+                        <h5 class="card-title fw-bold">Quick Enrollment</h5>
+                        <p class="card-text">Submit your information in minutes with our simple form interface.</p>
+                        <!-- Collapsible More Info -->
+                        <div class="collapse" id="moreInfo1">
+                            <p class="card-text mt-2 small">
+                                Our streamlined form ensures minimal errors, with real-time validation, autosave, and helpful tooltips to guide you through the process.
+                            </p>
+                        </div>
+
+                        <a class="btn btn-primary mt-2" data-bs-toggle="collapse" href="#moreInfo1" role="button" aria-expanded="false" aria-controls="moreInfo1">
+                            Read More
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card bg-secondary text-light">
+                    <div class="card-body">
+                        <i class="bi bi-shield-lock-fill fs-1 text-success mb-3"></i>
+                        <h5 class="card-title fw-bold">Secure Data</h5>
+                        <p class="card-text">Your documents and images are safely encrypted and stored in our system.</p>
+                        <div class="collapse" id="moreInfo2">
+                            <p class="card-text mt-2 small">
+                                All data is protected with AES-256 encryption. Our platform complies with the latest security standards and includes automatic backups and access control.
+                            </p>
+                        </div>
+
+                        <a class="btn btn-dark mt-2" data-bs-toggle="collapse" href="#moreInfo2" role="button" aria-expanded="false" aria-controls="moreInfo2">
+                            Read More
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card bg-dark text-light">
+                    <div class="card-body">
+                        <i class="bi bi-headset fs-1 text-warning mb-3"></i>
+                        <h5 class="card-title fw-bold">24/7 Support</h5>
+                        <p class="card-text">We’re here to help anytime with your onboarding needs and questions.</p>
+                        <div class="collapse" id="moreInfo3">
+                            <p class="card-text mt-2 small">
+                                Connect with our chatbot, live agent, or request a callback anytime. Our multilingual support team ensures a smooth experience around the clock.
+                            </p>
+                        </div>
+
+                        <a class="btn btn-primary mt-2" data-bs-toggle="collapse" href="#moreInfo3" role="button" aria-expanded="false" aria-controls="moreInfo3">
+                            Read More
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+<!-- Testimonials / What Customers Say -->
+<<section class="bg-light py-5">
+    <div class="container text-center">
+        <h2 class="fw-bold mb-4" style="color: #3a75c4;">What Our Clients Are Saying</h2>
+
+        <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000">
+            <!-- Slides -->
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <blockquote class="blockquote">
+                        <p class="fs-5 fst-italic">
+                            "InsureEase made onboarding smooth and secure. Our clients were onboarded in record time!
+                            The automated process reduced manual errors, and the customer feedback has been overwhelmingly positive."
+                        </p>
+                        <footer class="blockquote-footer mt-3">Anita D</footer>
+                    </blockquote>
+                </div>
+                <div class="carousel-item">
+                    <blockquote class="blockquote">
+                        <p class="fs-5 fst-italic">
+                            "I was able to upload all client docs in one go. Super helpful and very intuitive.
+                            The drag-and-drop interface and instant validation saved us hours of back-and-forth with customers."
+                        </p>
+                        <footer class="blockquote-footer mt-3">Ravi S</footer>
+                    </blockquote>
+                </div>
+                <div class="carousel-item">
+                    <blockquote class="blockquote">
+                        <p class="fs-5 fst-italic">
+                            "Clean interface and fast processing. It’s the future of insurance customer service!
+                            We saw a 40% drop in support calls after switching to InsureEase due to its user-friendly workflow."
+                        </p>
+                        <footer class="blockquote-footer mt-3">Megan T</footer>
+                    </blockquote>
+                </div>
+            </div>
+
+            <!-- Navigation -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+                <span class="fs-1 text-dark" aria-hidden="true">&lt;</span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+                <span class="fs-1 text-dark" aria-hidden="true">&gt;</span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+</section>
+
+
+
+
+<!--Loan Onboarding Services-->
+<section id="services" class="py-5" style="background-color: #2f3e50; color: white;">
+    <div class="container text-center">
+        <h2 class="fw-bold mb-3" style="color: #5ec6e6;">Loan Onboarding Services</h2>
+        <p class="mb-5">We streamline the loan customer journey with secure, fast, and reliable tools that enhance client experience and efficiency.</p>
+
+        <div class="row row-cols-1 row-cols-md-4 g-4 justify-content-center">
+
+            <!-- Card 1 -->
+            <div class="col" data-aos="zoom-in" data-aos-delay="0">
+                <div class="p-4 h-100" style="background-color: #3b4a5c;">
+                    <img src="https://cdn-icons-png.flaticon.com/512/1042/1042330.png" width="60" alt="Document Collection">
+                    <h5 class="fw-bold mt-3">Document Collection</h5>
+                    <p class="small">
+                        Collect and validate customer documents quickly with our smart file intake and verification process.
+                        Our system supports secure uploads, OCR scanning, and format checks to reduce manual overhead and ensure data accuracy.
+                    </p>
+                    <a href="#" class="text-info small text-decoration-none">Learn More ></a>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="col" data-aos="zoom-in" data-aos-delay="100">
+                <div class="p-4 h-100" style="background-color: #3b4a5c;">
+                    <img src="https://cdn-icons-png.flaticon.com/512/4108/4108960.png" width="60" alt="Eligibility Checks">
+                    <h5 class="fw-bold mt-3">Eligibility Checks</h5>
+                    <p class="small">
+                        Instant KYC, credit checks, and risk profiling to pre-qualify loan customers with confidence.
+                        Our engine integrates with external bureaus and government APIs for seamless decisioning and compliance assurance.
+                    </p>
+                    <a href="#" class="text-info small text-decoration-none">Learn More ></a>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="col" data-aos="zoom-in" data-aos-delay="200">
+                <div class="p-4 h-100" style="background-color: #3b4a5c;">
+                    <img src="https://cdn-icons-png.flaticon.com/512/3448/3448529.png" width="60" alt="Loan Tracker">
+                    <h5 class="fw-bold mt-3">Loan Tracker</h5>
+                    <p class="small">
+                        Keep customers informed with real-time updates about their application status and approval.
+                        The tracker provides visibility across every step—from submission to disbursement—reducing customer queries and improving satisfaction.
+                    </p>
+                    <a href="#" class="text-info small text-decoration-none">Learn More ></a>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="col" data-aos="zoom-in" data-aos-delay="300">
+                <div class="p-4 h-100" style="background-color: #3b4a5c;">
+                    <img src="https://cdn-icons-png.flaticon.com/512/1104/1104960.png" width="60" alt="Fraud Detection">
+                    <h5 class="fw-bold mt-3">Fraud Detection</h5>
+                    <p class="small">
+                        AI-powered fraud alerts to detect suspicious activity before it becomes a threat.
+                        Our algorithms analyze behavioral patterns and data anomalies to flag risks instantly, ensuring a secure onboarding environment.
+                    </p>
+                    <a href="#" class="text-info small text-decoration-none">Learn More ></a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!--User Engagement Overviews-->
+<section id="Journey" class="p-5 bg-primary">
+    <div class="container">
+        <h2 class="text-center text-white">User Engagement Overviews</h2>
+        <p class="lead text-center text-white mb-5">
+            Discover how real users smoothly completed their loan applications using InsureEase—from document submission to instant eligibility checks and loan approvals.
+        </p>
+
+        <div class="row g-4 justify-content-center">
+            <!-- Card 1 -->
+            <div class="col-md-6 col-lg-3">
+                <div class="card bg-light h-100 customer-card">
+                    <div class="card-body text-center">
+                        <img src="https://randomuser.me/api/portraits/men/11.jpg" class="rounded-circle mb-3" width="80" alt="John">
+                        <h4 class="card-title mb-2">John D.</h4>
+                        <p class="card-text">“As a first-time borrower, InsureEase helped me upload all my documents easily and guided me through eligibility in minutes.”</p>
+                        <div class="d-flex justify-content-center mt-3">
+                            <a href="#" class="text-dark mx-2"><i class="bi bi-twitter fs-5"></i></a>
+                            <a href="#" class="text-dark mx-2"><i class="bi bi-facebook fs-5"></i></a>
+                            <a href="#" class="text-dark mx-2"><i class="bi bi-linkedin fs-5"></i></a>
+                            <a href="#" class="text-dark mx-2"><i class="bi bi-instagram fs-5"></i></a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="col-md-6 col-lg-3">
+                <div class="card bg-light h-100 customer-card">
+                    <div class="card-body text-center">
+                        <img src="https://randomuser.me/api/portraits/women/12.jpg" class="rounded-circle mb-3" width="80" alt="Maria">
+                        <h4 class="card-title mb-2">Maria L.</h4>
+                        <p class="card-text">“Running a business is hard. InsureEase made my loan application fast and stress-free with real-time status tracking.”</p>
+                        <div class="d-flex justify-content-center mt-3">
+                            <a href="#" class="text-dark mx-2"><i class="bi bi-twitter fs-5"></i></a>
+                            <a href="#" class="text-dark mx-2"><i class="bi bi-facebook fs-5"></i></a>
+                            <a href="#" class="text-dark mx-2"><i class="bi bi-linkedin fs-5"></i></a>
+                            <a href="#" class="text-dark mx-2"><i class="bi bi-instagram fs-5"></i></a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="col-md-6 col-lg-3">
+                <div class="card bg-light h-100 customer-card">
+                    <div class="card-body text-center">
+                        <img src="https://randomuser.me/api/portraits/men/14.jpg" class="rounded-circle mb-3" width="80" alt="Amit">
+                        <h4 class="card-title mb-2">Amit K.</h4>
+                        <p class="card-text">“The auto-validation of details saved me hours of manual corrections. Approval was smooth and quick!”</p>
+                        <div class="d-flex justify-content-center mt-3">
+                            <a href="#" class="text-dark mx-2"><i class="bi bi-twitter fs-5"></i></a>
+                            <a href="#" class="text-dark mx-2"><i class="bi bi-facebook fs-5"></i></a>
+                            <a href="#" class="text-dark mx-2"><i class="bi bi-linkedin fs-5"></i></a>
+                            <a href="#" class="text-dark mx-2"><i class="bi bi-instagram fs-5"></i></a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="col-md-6 col-lg-3">
+                <div class="card bg-light h-100 customer-card">
+                    <div class="card-body text-center">
+                        <img src="https://randomuser.me/api/portraits/women/22.jpg" class="rounded-circle mb-3" width="80" alt="Priya">
+                        <h4 class="card-title mb-2">Priya M.</h4>
+                        <p class="card-text">“The document upload and verification process was so intuitive. I completed my home loan request during my lunch break.”</p>
+                        <div class="d-flex justify-content-center mt-3">
+                            <a href="#" class="text-dark mx-2"><i class="bi bi-twitter fs-5"></i></a>
+                            <a href="#" class="text-dark mx-2"><i class="bi bi-facebook fs-5"></i></a>
+                            <a href="#" class="text-dark mx-2"><i class="bi bi-linkedin fs-5"></i></a>
+                            <a href="#" class="text-dark mx-2"><i class="bi bi-instagram fs-5"></i></a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+<!-- Floating Popup -->
+<div id="onboardPopup" class="card shadow-lg position-fixed" style="bottom: 20px; right: 20px; width: 300px; z-index: 1055; display: none;">
+    <div class="card-body text-center">
+        <h5 class="fw-bold mb-2">Ready to get started?</h5>
+        <p class="small">Register now and streamline your customer onboarding process.</p>
+        <a class="btn btn-primary btn-sm" asp-controller="Customer" asp-action="Entry">Start Onboarding</a>
+        <button type="button" class="btn-close position-absolute top-0 end-0 m-2" onclick="closePopup()" aria-label="Close"></button>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        let hasShown = false;
+        window.addEventListener('scroll', () => {
+            if (!hasShown && (window.scrollY > 200 || window.scrollY < 50)) {
+                document.getElementById("onboardPopup").style.display = "block";
+                hasShown = true;
+            }
+        });
+
+        function closePopup() {
+            document.getElementById("onboardPopup").style.display = "none";
+        }
+    </script>
+}
+
+<footer class="bg-dark text-light pt-5 pb-4">
+    <div class="container">
+        <div class="row">
+
+            <!-- About InsureEase -->
+            <div class="col-md-4 mb-4">
+                <h5 class="fw-bold">InsureEase</h5>
+                <p>InsureEase simplifies the loan onboarding process with secure, seamless tools for document uploads, eligibility checks, and real-time tracking—all in one platform.</p>
+            </div>
+
+            <!-- Useful Links -->
+            <div class="col-md-3 mb-4">
+                <h6 class="fw-bold">Quick Links</h6>
+                <ul class="list-unstyled">
+                    <li><a href="/Home/About" class="text-light text-decoration-none">About Us</a></li>
+                    <li><a href="/Home/Index#service" class="text-light text-decoration-none">Our Services</a></li>
+                    <li><a href="/Customer/Entry" class="text-light text-decoration-none">Start Onboarding</a></li>
+                    <li><a href="/Contact/Index" class="text-light text-decoration-none">Contact</a></li>
+                </ul>
+            </div>
+
+
+            <!-- Download App -->
+            <div class="col-md-3 mb-4">
+                <h6 class="fw-bold">Get the App</h6>
+                <p class="small">Experience faster onboarding from your phone.</p>
+                <a href="#" class="btn btn-sm btn-light d-block mb-2">Download for Android</a>
+                <a href="#" class="btn btn-sm btn-outline-light d-block">Download for iOS</a>
+            </div>
+
+
+
+            <!-- Contact Info -->
+            <div class="col-md-2 mb-4">
+                <h6 class="fw-bold">Contact Us</h6>
+                <div class="d-flex align-items-start mb-2">
+                    <i class="bi bi-telephone-fill me-2 text-primary"></i>
+                    <span>1-800-123-4567</span>
+                </div>
+
+                <div class="d-flex align-items-start mb-2">
+                    <i class="bi bi-envelope-fill me-2 text-primary"></i>
+                    <span>support@insureease.com</span>
+                </div>
+
+                <div class="d-flex align-items-start mb-2">
+                    <i class="bi bi-geo-alt-fill me-2 text-primary"></i>
+                    <span>123 Main St<br />Anytown, USA 12345</span>
+                </div>
+                <div class="d-flex mt-2">
+                    <a href="#" class="me-2 text-light"><i class="bi bi-facebook"></i></a>
+                    <a href="#" class="me-2 text-light"><i class="bi bi-twitter"></i></a>
+                    <a href="#" class="me-2 text-light"><i class="bi bi-linkedin"></i></a>
+                    <a href="#" class="text-light"><i class="bi bi-instagram"></i></a>
+                </div>
+            </div>
+
+        </div>
+         
+       
+    </div>
+</footer>
+
+<style>
+    .card:hover .btn {
+        background-color: #fff !important;
+        color: var(--bs-primary) !important;
+        border: 1px solid #fff;
+        transition: background-color 0.3s ease, color 0.3s ease;
+    }
+    </style>
